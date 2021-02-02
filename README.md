@@ -48,3 +48,9 @@ within it and track the active player.
 <img src="./gifs/3-collision-detection.gif" width=300 height=250>
 
 Simple rectangle collision detection. When the player enters the block, he turns white.
+
+### 4-shooting
+
+<img src="./gifs/4-shooting.gif" width=300 height=250>
+
+Demonstrates spawning and updating bullets in the Player's direction.
