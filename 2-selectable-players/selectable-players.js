@@ -313,14 +313,23 @@ Main.__super__ = hxd_App;
 Main.prototype = $extend(hxd_App.prototype,{
 	init: function() {
 		var text = new h2d_HtmlText(hxd_res_DefaultFont.get(),this.s2d);
-		text.set_text(h2d_HtmlText.defaultFormatText("<font color='#FF0000'>MOVING RECTANGLES</font>"));
+		text.set_text(h2d_HtmlText.defaultFormatText("<font color='#FF0000'>SELECTABLE PLAYERS</font>"));
 		text.posChanged = true;
 		text.x = this.s2d.width * 0.5;
-		this.player = new Player(50,50,40,75);
-		this.s2d.addChild(this.player);
+		var firstPlayer = new Player(50,50,40,75);
+		var secondPlayer = new Player(50,150,40,75);
+		var thirdPlayer = new Player(50,250,40,75);
+		this.playerGroup = new PlayerGroup([firstPlayer,secondPlayer,thirdPlayer]);
+		var _g = 0;
+		var _g1 = this.playerGroup.getPlayers();
+		while(_g < _g1.length) {
+			var player = _g1[_g];
+			++_g;
+			this.s2d.addChild(player);
+		}
 	}
 	,update: function(dt) {
-		this.player.update(dt);
+		this.playerGroup.update(dt);
 	}
 	,__class__: Main
 });
@@ -1782,6 +1791,27 @@ Player.prototype = $extend(h2d_Bitmap.prototype,{
 	}
 	,__class__: Player
 });
+var PlayerGroup = function(players) {
+	this.players = players;
+	this.activePlayerIndex = 0;
+	this.activePlayer = this.players[this.activePlayerIndex];
+};
+$hxClasses["PlayerGroup"] = PlayerGroup;
+PlayerGroup.__name__ = "PlayerGroup";
+PlayerGroup.prototype = {
+	getPlayers: function() {
+		return this.players;
+	}
+	,update: function(dt) {
+		haxe_Log.trace(this.activePlayerIndex,{ fileName : "PlayerGroup.hx", lineNumber : 19, className : "PlayerGroup", methodName : "update"});
+		if(hxd_Key.isPressed(9)) {
+			this.activePlayerIndex = (this.activePlayerIndex + 1) % this.players.length;
+			this.activePlayer = this.players[this.activePlayerIndex];
+		}
+		this.activePlayer.update(dt);
+	}
+	,__class__: PlayerGroup
+};
 var Reflect = function() { };
 $hxClasses["Reflect"] = Reflect;
 Reflect.__name__ = "Reflect";
@@ -61901,4 +61931,4 @@ hxsl_SharedShader.UNROLL_LOOPS = false;
 }
 })(typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);
 
-//# sourceMappingURL=hello.js.map
+//# sourceMappingURL=selectable-players.js.map
