@@ -22,6 +22,9 @@ haxe build.hxml
 
 ### 1-moving-squares
 
+<img src="./gifs/1-moving-squares.gif" width=300 height=250>
+
+
 Shows how to properly move a square using the keyboard.  Note the use of delta time
 so even on a low frame rate we move consistently.
 
@@ -29,6 +32,9 @@ Also note the use of a vector (`[0, 1]`) for movement instead of hardcoding
 player's `x` and `y` coordinates.
 
 ### 2-selectable-players
+
+<img src="./gifs/2-selectable-players.gif" width=300 height=250>
+
 
 Shows how to have multiple players on the screen and TAB between them. Gives
 off some serious [The Lost
@@ -38,5 +44,7 @@ The gist of it is that we create a `playerGroup` and put all of our players
 within it and track the active player.
 
 ### 3-collision-detection
+
+<img src="./gifs/3-collision-detection.gif" width=300 height=250>
 
 Simple rectangle collision detection. When the player enters the block, he turns white.
