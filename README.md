@@ -37,10 +37,6 @@ Vikings](https://en.wikipedia.org/wiki/The_Lost_Vikings) vibes.
 The gist of it is that we create a `playerGroup` and put all of our players
 within it and track the active player.
 
-### 3-text (WIP)
-
-Demonstrates Text and HtmlText as well as how to resize some text.
-
-### 4-collision-detection
+### 3-collision-detection
 
 Simple rectangle collision detection. When the player enters the block, he turns white.
