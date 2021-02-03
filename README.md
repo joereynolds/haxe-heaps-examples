@@ -1,12 +1,12 @@
 # Haxe + Heaps Examples
 
-I found the docs severely lacking for some pretty basic things when it came to
-using [Heaps](https://heaps.io/).
+I found the docs lacking for some basic things when it came to using
+[Heaps](https://heaps.io/).
 
 These are some really basic examples to get you up and running.
 
-Just a note: The examples are not progressive. I.e. the fourth example is not
-more "difficult" than the first.  They're numbered for convenience.
+These are not progressivle examples. I.e. the fourth example is not more
+"difficult" than the first.  They're numbered for convenience.
 
 ## Running the examples
 
@@ -24,9 +24,8 @@ haxe build.hxml
 
 <img src="./gifs/1-moving-squares.gif" width=300 height=250>
 
-
-Shows how to properly move a square using the keyboard.  Note the use of delta time
-so even on a low frame rate we move consistently.
+Shows how to properly move a square using the keyboard.  Note the use of delta
+time so even on a low frame rate we move consistently.
 
 Also note the use of a vector (`[0, 1]`) for movement instead of hardcoding
 player's `x` and `y` coordinates.
@@ -34,7 +33,6 @@ player's `x` and `y` coordinates.
 ### 2-selectable-players
 
 <img src="./gifs/2-selectable-players.gif" width=300 height=250>
-
 
 Shows how to have multiple players on the screen and TAB between them. Gives
 off some serious [The Lost
@@ -47,10 +45,18 @@ within it and track the active player.
 
 <img src="./gifs/3-collision-detection.gif" width=300 height=250>
 
-Simple rectangle collision detection. When the player enters the block, he turns white.
+Simple rectangle collision detection. When the player enters the block, he
+turns white.
 
 ### 4-shooting
 
 <img src="./gifs/4-shooting.gif" width=300 height=250>
 
 Demonstrates spawning and updating bullets in the Player's direction.
+
+### 5-scene-management
+
+<img src="./gifs/5-scene-management.gif" width=300 height=250>
+
+Shows how to switch between different scenes.  E.g. Going from a main menu to
+the actual game and into a shop.
