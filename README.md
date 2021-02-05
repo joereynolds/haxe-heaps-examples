@@ -5,7 +5,7 @@ I found the docs lacking for some basic things when it came to using
 
 These are some really basic examples to get you up and running.
 
-These are not progressivle examples. I.e. the fourth example is not more
+These are not progressive examples. I.e. the fourth example is not more
 "difficult" than the first.  They're numbered for convenience.
 
 ## Running the examples
