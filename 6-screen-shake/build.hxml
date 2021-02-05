@@ -1,0 +1,5 @@
+-cp src
+-lib heaps
+-js demo.js
+-main Main
+-debug

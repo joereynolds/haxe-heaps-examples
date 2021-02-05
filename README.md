@@ -60,3 +60,11 @@ Demonstrates spawning and updating bullets in the Player's direction.
 
 Shows how to switch between different scenes.  E.g. Going from a main menu to
 the actual game and into a shop.
+
+### 6-screen-shake
+
+<img src="./gifs/6-screen-shake.gif" width=300 height=250>
+
+Demonstrates shaking the screen. When the player enters the block, the screen shakes.
+
+The screen shake has been implemented as a [static extension](https://haxe.org/manual/lf-static-extension.html) to keep the code as clean as possible.
