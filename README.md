@@ -5,9 +5,6 @@ I found the docs lacking for some basic things when it came to using
 
 These are some really basic examples to get you up and running.
 
-These are not progressive examples. I.e. the fourth example is not more
-"difficult" than the first.  They're numbered for convenience.
-
 ## Running the examples
 
 The examples are already compiled and can be ran by opening the `index.html` in a browser.
@@ -45,8 +42,8 @@ within it and track the active player.
 
 <img src="./gifs/3-collision-detection.gif" width=300 height=250>
 
-Simple rectangle collision detection. When the player enters the block, he
-turns white.
+Simple rectangle collision detection. When the player enters the block, they
+turn white.
 
 ### 4-shooting
 
